@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Raleway', sans-serif;
+}
+header {
+    position: sticky;
+    top:0;
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #f2f2f2;
+}
