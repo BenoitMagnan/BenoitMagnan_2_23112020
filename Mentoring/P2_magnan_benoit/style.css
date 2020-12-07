@@ -1,15 +1,169 @@
-body{
+/* REGLAGES GLOBAUX */
+*{
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
+    color: black;
 }
-header {
-    position: sticky;
-    top:0;
-    background-color: #ffffff;
+
+h1 {
+    font-size: 1.4em;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+/* HEADER */
+.logo img {
+    margin-top: -6px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.element {
+    display: flex;
+}
+
+.element a {
+    display: flex;
+    align-items: center;
+}
+
+.element:nth-child(2)
+{
+    order: 3;
+}
+
+.navBar {
+    width: 100%;
+    padding: 22.5px;
+}
+
+.rightNav {
+    flex: 1;
+}
+
+.rightNav a {
+    color: #0065FC;
+    font-weight: bold;
+}
+
+.leftNav {
+    flex: 3;
+}
+
+/* FLEXBOX HEBERGEMENTS ET ACTIVITES */
+.movingNav {
+    width: 100%;
+}
+
+.movingNav a {
+    width: 100%;
+    padding: 13px;
+    justify-content: center;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+.movingNav a:hover {
+    color: #0065FC;
+    border-bottom: 3px solid #0065FC;
+}
+
+.movingNav a:active {
+    color: #0065FC;
+    border-bottom: 3px solid #0065FC;
+}
+
+/* REGLAGES - SECTION */
+section {
+    padding: 40px 5%;;
+}
+
+section > * {
+    padding: 5px 0;
+}
+
+#populaires {
+    background-color: #f2f2f2;
+}
+
+/* REGLAGES - RECHERCHE */
+button p{
+    display: none;
+}
+
+.search {
+    display: flex;
+}
+  
+.searchBar {
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    border-right: none;
+    border-left: none;
+    padding: 17px;
+    font-size: 1em;
+}
+
+.searchBar:focus{
+    font-weight: bold;
+    color: black;
+}
+
+.searchButton {
+    margin-left: -10px;
+    padding: 17px;
+    border: none;
+    border-radius: 25%;
+    background-color: #0065FC;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.searchButton i{color:white;}
+
+.fa-map-marker-alt {
+    padding: 17px;
+    border: none;
+    background: #f2f2f2;
+    border-radius: 25% 0 0 25%;
+    font-size: 1.2em;
+}
+
+
+/* REGLAGES - SECTION */
+/* REGLAGES - SECTION */
+/* REGLAGES - SECTION */
+/* REGLAGES - SECTION */
+/* REGLAGES - SECTION */
+/* FOOTER */
 
 footer {
     background-color: #f2f2f2;
+    padding: 30px;
+}
+
+footer li {
+    padding: 5px 0px;
 }
