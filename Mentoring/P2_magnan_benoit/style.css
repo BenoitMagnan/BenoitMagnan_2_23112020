@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    line-height: normal;
     font-family: 'Raleway';
     color: black;
 }
@@ -27,7 +28,7 @@ a:hover, button:hover{
     cursor: pointer;
 }
 
-/* HEADER */
+/* REGLAGES - HEADER */
 .logo img {
     margin-top: -6px;
 }
@@ -66,7 +67,7 @@ a:hover, button:hover{
     flex: 3;
 }
 
-/* FLEXBOX HEBERGEMENTS ET ACTIVITES */
+/* REGLAGES - FLEXBOX HEBERGEMENTS ET ACTIVITES */
 header .element:nth-child(2)
 {
     order: 3;
@@ -227,11 +228,136 @@ button p{
     padding-left: 3%;
 }
 
-/* REGLAGES - SECTION */
-/* REGLAGES - SECTION */
-/* REGLAGES - SECTION */
-/* FOOTER */
+/* REGLAGES - POPULAIRE */
+#populaires .element {
+    width: 100%;
+    justify-content: space-between;
+}
 
+.titre {
+    padding: 10px 0;
+}
+
+.fa-chart-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+/* REGLAGES - CARTE */
+.card {
+    display: flex;
+    margin: 10px auto;
+    height: 150px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #d2d2d2;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px  #b6b5b5;
+}
+
+.photo {
+    width: 45%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.description {
+    position: relative;
+    width: 55%;
+    padding: 5%;
+    border-radius: 0 15px 15px 0;
+}
+
+.description p {
+    line-height: 2;
+}
+
+.rating {
+    position: absolute;
+    bottom: 12px;
+}
+
+.rating i {
+    font-size: 0.8em;
+    color: #0065FC;
+}
+
+.rating .grey {
+    color: #d2d2d2;
+}
+
+/* REGLAGES - CARTE HEBERGEMENT */
+.hebergement {
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.hebergement .element {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hebergement .photo {
+    min-width: 100%;
+    height: 115px;
+}
+
+.hebergement .photo img {
+    border-radius: 15px 15px 0 0 ;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hebergement .description {
+    width:100%;
+    height:100%;
+    padding: 10px;
+}
+
+.hebergement .rating {
+    position: relative;
+    margin: 10px auto;
+}
+/* REGLAGES - MORE */
+.more {
+    margin: 35px auto 0px;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/* REGLAGES - CARTE ACTIVITES */
+.card.activites {
+    height: 190px;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 25px auto;
+}
+
+.activites .photo {
+    height: 135px;
+}
+
+.activites .description {
+    height: auto;
+}
+
+
+
+/* FOOTER */
 footer {
     background-color: #f2f2f2;
     padding: 30px;
