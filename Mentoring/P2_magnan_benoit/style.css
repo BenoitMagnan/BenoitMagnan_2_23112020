@@ -8,6 +8,11 @@
     color: black;
 }
 
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
 h1 {
     font-size: 1.4em;
 }
@@ -34,10 +39,10 @@ a:hover, button:hover{
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .element {
@@ -51,16 +56,19 @@ a:hover, button:hover{
 
 .navBar {
     width: 100%;
-    padding: 22.5px;
+    padding: 12.5px;
 }
 
 .rightNav {
     flex: 1;
+    width: 100%;
+    justify-content: center;
 }
 
 .rightNav a {
     color: #0065FC;
     font-weight: bold;
+    padding: 13px;
 }
 
 .leftNav {
@@ -95,7 +103,7 @@ header .element:nth-child(2)
 
 /* REGLAGES - SECTION */
 section {
-    padding: 25px 5%;;
+    padding: 25px 5%;
 }
 
 section > * {
@@ -135,7 +143,7 @@ section > * {
     padding-left: 5%;
 }
 
-.searchBar:focus{
+.searchBar:focus, .searchBar:hover{
     font-weight: bold;
     color: black;
 }
@@ -166,6 +174,7 @@ button p{
 
 .filtre {
     margin: 6px 0px;
+    width: 100%;
 }
 
 .filtre:hover > p {
@@ -225,17 +234,16 @@ button p{
 }
 
 .info p {
-    padding-left: 3%;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* REGLAGES - POPULAIRE */
 #populaires .element {
     width: 100%;
     justify-content: space-between;
-}
-
-.titre {
-    padding: 10px 0;
 }
 
 .fa-chart-line {
@@ -249,6 +257,7 @@ button p{
 .card {
     display: flex;
     margin: 10px auto;
+    width: 100%;
     height: 150px;
     background-color: white;
     border-radius: 15px;
@@ -298,9 +307,12 @@ button p{
     color: #d2d2d2;
 }
 
+
 /* REGLAGES - CARTE HEBERGEMENT */
+
 .hebergement {
     height: 200px;
+    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -340,38 +352,311 @@ button p{
 
 
 /* REGLAGES - CARTE ACTIVITES */
+.conteneur {
+    width: 100%;
+    margin: 0;
+}
 .card.activites {
     height: 190px;
-    flex-wrap: wrap;
     padding: 0px;
-    margin: 25px auto;
+    margin: 20px auto 0px;
 }
 
 .activites .photo {
-    height: 135px;
+    height: 140px;
 }
 
 .activites .description {
     height: auto;
 }
 
+.firstPart{
+    width: 100%;
+    height: 100%;
+}
+
+.secondPart {
+    position: absolute;
+    display: flex;
+    align-self: end;
+    width: 300px;
+    height: 50px;
+}
+
+.secondPart h4{
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
 
 
 /* FOOTER */
 footer {
     background-color: #f2f2f2;
-    padding: 15px 30px;
+    padding: 30px 30px;
+}
+
+.footerBlock {
+    width: 100%;
+    height: auto;
 }
 
 footer li {
-    padding: 5px 0px;
+    line-height: 2;
 }
 
 footer h4 {
     margin: 15px 0px;
 }
 
-.footerBlock {
+
+
+
+
+
+
+
+@media only screen and (min-width: 1100px) {
+/* REGLAGES - HEADER */
+.navBar {
     width: 100%;
-    margin: 10px auto 15px;
+    padding: 0px 50px;
+}
+
+.rightNav {
+    flex: 0;
+}
+.rightNav {
+    width: 20%;
+    height: 79px;
+}
+
+.leftNav {
+    flex: 3;
+}
+
+/* REGLAGES - FLEXBOX HEBERGEMENTS ET ACTIVITES */
+header .element:nth-child(3)
+{
+    order: 3;
+}
+
+.movingNav {
+    width: 20%;
+    height: 79px;
+}
+
+.movingNav a {
+    border: none;
+}
+
+.movingNav a:hover, .movingNav a:active {
+    border-top: 3px solid #0065FC;
+    border-bottom: none;
+}
+
+
+/* REGLAGES - SECTION */
+section {
+    margin: 0 50px;
+    padding: 25px 0px;
+}
+
+.titre {
+    margin: 20px 20px;
+}
+
+.fa-chart-line {
+    padding-right: 40px;
+}
+
+#populaires {
+    border-radius: 15px;
+    width: 25%;
+    min-width: 360px;
+    min-height: 660px;
+    max-height: 660px;
+    padding: 20px 20px;
+    float: right;
+}
+
+/* REGLAGES - RECHERCHE */
+.search {
+    width: 420px;
+}
+
+.searchButton {
+    min-width: 135px;
+    margin-left: -10px;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchButton i {
+    display: none;
+}
+
+button p{
+    display: inline;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* REGLAGES - FILTRES */
+ #searchEngine .container {
+    width: 100%;
+    margin:0;
+    padding:0; 
+    justify-content: flex-start;
+}
+
+#searchEngine .element:nth-child(1){
+    width: 5%;
+}
+
+.filtre {
+    margin-right: 25px;
+}
+/* REGLAGES - CARTE */
+#populaires .card {
+    min-width: 320px;
+    margin: 15px 15px;
+}
+
+.photo {
+    width: 35%;
+}
+
+.description {
+    position: relative;
+    width: 65%;
+    border-radius: 0 15px 15px 0;
+}
+
+/* REGLAGES - CARTE HEBERGEMENT */
+#hebergements {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    min-height: 660px;
+    max-height: 660px;
+    max-width: 61%;
+    padding: 20px 15px;
+}
+
+#hebergements .container{
+    margin: 0px;
+    padding :0px;
+    overflow: hidden;
+    height: 490px;
+    max-height: 490px;
+}
+
+.hebergement {
+    width: 250px;
+    max-width: 250px;
+    height: 200px;
+    flex-grow: 1;
+    margin: 20px 15px 15px;
+}
+
+.hebergement .photo {
+    min-width: 100%;
+    height: 115px;
+}
+
+.hebergement .photo img {
+    border-radius: 15px 15px 0 0 ;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#hebergements .more {
+    height: auto;
+    margin-left: 20px;
+}
+
+/* REGLAGES - CARTE ACTIVITES */
+#activites .container {
+    width: 100%;
+    height: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 100%;
+}
+
+.card.activites {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.firstPart{
+    width: 100%;
+    height: 100%;
+}
+
+.secondPart {
+    position: absolute;
+    display: flex;
+    align-self: end;
+    width: 300px;
+    height: 50px;
+}
+
+.secondPart .description {
+    height: auto;
+    border-radius: 0;
+}
+
+.secondPart h4{
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card.big {
+    height: 500px;
+}
+
+.big .photo{
+    height: 450px;
+}
+
+.card.medium {
+    height: 300px;
+}
+
+.medium .photo{
+    height: 250px;
+}
+
+.card.small {
+    height: 165px;
+    align-self: end;
+}
+
+.small .photo{
+    height: 115px;
+}
+
+/* FOOTER */
+
+.footerBlock {
+    height: 150px;
+    width: 30%;
+    justify-content: space-between;
+    margin: 10px auto 15px
+}
 }
